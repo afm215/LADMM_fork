@@ -48,7 +48,7 @@ class PnP_ALPHA_PGD():
         x = x.float()
         x = x.requires_grad_()
 
-        N = self.denoiser(x, sigma)
+        N = self.denoiser(torch.cat((x, self.sigma_d.repeat(x.shape[0],1,x.shape[2], x.shape[3])), dim=1))
        
         JN = torch.autograd.grad(N, x, grad_outputs=x - N, create_graph=True, only_inputs=True)[0]
         Dg = x - N - JN
