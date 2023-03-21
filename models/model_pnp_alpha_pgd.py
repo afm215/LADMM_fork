@@ -74,7 +74,7 @@ class PnP_ALPHA_PGD():
         y_k = (1 - self.alpha)*(y_k) + self.alpha*Dz
         x = Dz
 
-        return x, y
+        return x, y_k
     
     def init_pnp(self, y, sf):
         upsampler = nn.Upsample(scale_factor=sf, mode='bilinear', align_corners=False)
