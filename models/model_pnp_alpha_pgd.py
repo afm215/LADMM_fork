@@ -91,7 +91,7 @@ class PnP_ALPHA_PGD():
             for _ in range(self.n_iter):
                 torch.cuda.synchronize()
                 t1 = time.perf_counter()
-                x, y_k = self.run_iter(x, y_k, self.sigma, self.kmap, self.basis, self.sf)
+                x, y_k = self.run_iter(x, y_k, self.sigma, self.kmap, self.basis)
                 torch.cuda.synchronize()
                 t2 = time.perf_counter()
 
