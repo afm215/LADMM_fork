@@ -12,3 +12,4 @@ torch
 torchmetrics
 pandas
 matplotlib
+pycocotools
