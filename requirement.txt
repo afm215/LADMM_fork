@@ -10,3 +10,5 @@ timm
 einops
 torch
 torchmetrics
+pandas
+matplotlib
