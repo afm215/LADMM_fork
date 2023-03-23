@@ -165,7 +165,10 @@ class Dataset(data.Dataset):
         # --------------------------------
         
         if self.sigma_min == 0:
-            if random.randint(0, 8) == 1:
+            if self.sigma_max == 0:
+                noise_level = 0
+            
+            elif random.randint(0, 8) == 1:
                     noise_level = 0 / 255.0
             else:
                 noise_level = np.random.randint(0, self.sigma_max) / 255.0
