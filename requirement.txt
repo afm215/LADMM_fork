@@ -8,3 +8,5 @@ lmdb
 requests
 timm
 einops
+torch
+torchmetrics
